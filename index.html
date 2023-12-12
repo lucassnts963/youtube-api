@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <title>YouTube Downloader</title>
+</head>
+<body class="bg-gray-100 h-screen flex items-center justify-center">
+    <div class="max-w-md p-6 bg-white rounded-md shadow-md">
+        <h2 class="text-2xl font-bold mb-4">YouTube Downloader</h2>
+
+        <!-- Baixar Vídeo Individual -->
+        <form action="http://127.0.0.1:8000/download_audio" method="get">
+            <label for="video_url" class="block text-sm font-medium text-gray-600">URL do Vídeo:</label>
+            <input type="text" id="video_url" name="url" required
+                class="mt-1 p-2 border border-gray-300 rounded-md w-full">
+
+            <button type="submit" class="mt-4 bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300">
+                Baixar Vídeo
+            </button>
+        </form>
+
+        <!-- Baixar Playlist -->
+        <form action="http://127.0.0.1:8000/download_playlist" method="get">
+            <label for="playlist_url" class="block text-sm font-medium text-gray-600 mt-6">URL da Playlist:</label>
+            <input type="text" id="playlist_url" name="url" required
+                class="mt-1 p-2 border border-gray-300 rounded-md w-full">
+
+            <button type="submit" class="mt-4 bg-green-500 text-white py-2 px-4 rounded-md hover:bg-green-600 focus:outline-none focus:ring focus:border-green-300">
+                Baixar Playlist
+            </button>
+        </form>
+    </div>
+</body>
+</html>
